@@ -10,8 +10,8 @@
     <nav>
       <ul id="Menu">
         <li class="Menu"><a href="index.html">Home</a></li>
-        <li class="Menu"><a href="w3p1.html">Pagina 1</a></li>
-        <li class="Menu"><a href="w3p2.html">Pagina 2</a> </li>
+        <li class="Menu"><a href="w3p1.html">standpunten</a></li>
+        <li class="Menu"><a href="w3p2.html">Partij</a> </li>
         <li class="Menu"><a href="w3p3.html">Pagina 3</a> </li>
       </ul>
     </nav>
@@ -20,8 +20,57 @@
       <h1 class="Afkorting">PVI</h1>
     </header>
     <aside>
-      <h2>kopje</h2>
-      <p>Tekst</p>
+      <article id="timerarticle">
+        <div id="bigclockdiv">
+        <h2 id="timerh2">Er kan gestemd worden over</h2>
+        <p>
+          <div id="clockdiv">
+            <div>
+              <span class="days" id="day"></span>
+              <div class="smalltext">dagen</div>
+            </div>
+            <div>
+              <span class="hours" id="hour"></span>
+              <div class="smalltext">uren</div>
+            </div>
+            <div>
+              <span class="minutes" id="minute"></span>
+              <div class="smalltext">minuten</div>
+            </div>
+            <div>
+              <span class="seconds" id="second"></span>
+              <div class="smalltext">seconden</div>
+            </div>
+          </div>
+        </p>
+        </div>
+      </article>
+      <p id="demo"></p>
+      <script type="text/javascript">
+      var stemmendeadline = new Date("Mar 17, 2021 07:00:00").getTime();
+
+      var x = setInterval(function() {
+
+      var now = new Date().getTime();
+      var t = stemmendeadline - now;
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+      var minutes = Math.floor((t%(1000 * 60 * 60))/(1000*60));
+      var seconds = Math.floor((t % (1000 * 60)) / 1000);
+      document.getElementById("day").innerHTML = days;
+      document.getElementById("hour").innerHTML = hours;
+      document.getElementById("minute").innerHTML = minutes;
+      document.getElementById("second").innerHTML = seconds;
+      if (t < 0){
+               clearInterval(x);
+               document.getElementById("demo").innerHTML = "TIME UP";
+               document.getElementById("day").innerHTML = '0';
+               document.getElementById("hour").innerHTML = '0';
+               document.getElementById("minute").innerHTML = '0';
+               document.getElementById("second").innerHTML = '0';
+                  }
+      }, 1000);
+      </script>
     </aside>
     <section>
       <article>
@@ -38,7 +87,7 @@
       </article>
     </section>
     <footer>
-     <h3><center>© Made by <a href = "mailto: 23514@edu.msa.nl ">Azothoth</a></center></h3>
+     <h3><center>© Made by <a href = "mailto: 23514@edu.msa.nl ">Azathoth</a></center></h3>
     </footer>
     </div>
   </body>

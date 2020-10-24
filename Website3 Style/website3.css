@@ -55,17 +55,16 @@ section{
 
 }
 aside{
-  border: solid 4px black;
+  border: solid 4px #FF8800;
   border-radius: 0px 20px 0px 20px;
   background-color: white;
   margin: 4px 7px 4px 7px;
   padding: 10px;
   float: right;
   width: 310px;
-  height: 360px;
 }
 section article{
-  border: solid 4px black;
+  border: solid 4px #FF8800;
   border-radius: 0px 20px 0px 20px;
   background-color: white;
   margin: 4px 7px 4px 7px;
@@ -100,4 +99,40 @@ a.link:visited {
 }
 a.link{
   color: black;
+}
+#timerarticle{
+  text-align: center;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+#timerh2{
+  color: #000000;
+  font-weight: 10;
+  font-size: 25px;
+  margin: 0px 0px 10px;
+}
+#clockdiv{
+  font-family: sans-serif;
+  color: #000000;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+#bigclockdiv{
+  background-color: #ff7b00;
+  border-radius: 10px;
+}
+#clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #eb9431;
+  display: inline-block;
+}
+#clockdiv div > span {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #cc9a37;
+  display: inline-block;
 }
